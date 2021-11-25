@@ -2,8 +2,9 @@ package lab06_hash_functions;
 
 import static lab06_hash_functions.File_Operations.*;
 /**
- *
+ * Basic hash implementation with xor
  * @author David Madrigal Buendía
+ * @version 1.1
  */
 public class Basic_Hash {
     /**
@@ -11,6 +12,7 @@ public class Basic_Hash {
      * @param file_name The file name where the bytes will read
      * @param m exponential of 2^m bits
      * @return Byte array with the resulting hash block
+     * @exception Exception m can't be less than 3
      */
     public static byte[] do_hash_block(String file_name, int m) throws Exception
     {
@@ -47,6 +49,13 @@ public class Basic_Hash {
         return hash_byte;
     }
     
+    /**
+     * Method to do hash block with xor, the block size depends from m. But returns a string in bit's representation
+     * @param file_name The file name where the bytes will read
+     * @param m exponential of 2^m bits
+     * @return Bits representation in a string
+     * @see do_hash_block
+     */
     public static String do_hash_block_string(String file_name, int m) throws Exception
     {
         byte[] hash_bytes = do_hash_block(file_name, m);

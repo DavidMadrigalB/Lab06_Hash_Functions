@@ -5,8 +5,9 @@ import static lab06_hash_functions.File_Operations.read_file;
 import static lab06_hash_functions.File_Operations.save_file_encode_base64;
 
 /**
- *
+ * Hash (SHA-256) with JCE library. Service
  * @author David Madrigal Buendía
+ * @version 1.0
  */
 public class Hash_JCE_Service {
     /**
